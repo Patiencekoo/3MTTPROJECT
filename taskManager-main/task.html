@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./frontend/styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1>Task Manager</h1>
+        <p>
+          Welcome to my tasky👍 <br />
+          Add a new task below
+        </p>
+        <form id="taskForm">
+          <input type="text" id="taskTitle" placeholder="Task title" />
+          <input type="text" id="taskDesc" placeholder="Task description" />
+
+          <select name="priority" id="priority">
+            <option disabled selected>Select Task Priority</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+
+          <div>
+            <label for="deadline">Dealine:</label>
+            <input type="date" name="deadline" id="deadline" />
+          </div>
+          <button type="submit" id="add">Add Task</button>
+        </form>
+
+        <button class="logOut">Log Out</button>
+      </div>
+      <div class="right">
+        <h2>All Tasks</h2>
+
+        <div class="allTasks">
+          <!-- <div class="task">
+            <h3>Task Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              ratione nihil facilis quis
+            </p>
+            <div class="details">
+              <p>Priority: High</p>
+              <p>Deadline: today</p>
+            </div>
+            <div class="control">
+              <span>Edit</span>
+              <span>Delete</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./frontend/js/app.js"></script>
+  </body>
+</html>

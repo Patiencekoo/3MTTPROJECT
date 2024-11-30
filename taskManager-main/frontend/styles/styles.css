@@ -1,0 +1,160 @@
+:root {
+  --bg: #f0f2f5;
+  --white: #fff;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: max-content;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 20% 75%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.left {
+  height: 100%;
+  width: 100%;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.left h1 {
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.left p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: orange;
+}
+
+#taskForm {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#taskForm input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  outline: none;
+  background-color: var(--bg);
+}
+
+#taskForm select {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  outline: none;
+  background-color: var(--bg);
+}
+
+button {
+  width: 100%;
+  padding: 0.3rem;
+  font-size: bold;
+  outline: none;
+  border: none;
+  background-color: #893101;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.right {
+  width: 100%;
+  height: max-content;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.allTasks {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: flex-start;
+  justify-content: center;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.allTasks .task {
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: var(--white);
+}
+
+.allTasks .task:hover {
+  box-shadow: var(--shadow);
+  transition: 0.3s ease-in-out;
+}
+
+.allTasks .task h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.allTasks .task p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.allTasks .task .details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.allTasks .task .details p {
+  font-size: 0.8rem;
+}
+
+.allTasks .task .control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    background-color: #ccc;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+
+    &:last-child {
+      background-color: #222;
+    }
+  }
+}
